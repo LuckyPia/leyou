@@ -1,0 +1,23 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ld_note?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: zxcvbnml
+    hikari:
+      idle-timeout: 10000
+  cloud:
+    refresh:
+      extra-refreshable: none
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
